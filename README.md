@@ -46,5 +46,3 @@ The Event Reminder App helps users efficiently manage personal and professional 
 ###  Security - 
   + PIN/Biometric lock for privacy.
 
-### Screensort - 
-https://github.com/user-attachments/assets/14726d6c-ec76-4830-a12b-3f8f5ad2a011
