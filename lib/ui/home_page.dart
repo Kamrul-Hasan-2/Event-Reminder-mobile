@@ -3,8 +3,6 @@ import 'package:event_manager/SignIn/login_screen.dart';
 import 'package:event_manager/cloud%20backup/backup_restore.dart';
 import 'package:event_manager/controllers/taskfb_controller.dart';
 import 'package:event_manager/pin/app_lock_service.dart';
-import 'package:event_manager/pin/reset_pin_screen.dart';
-import 'package:event_manager/pin/set_pin_screen.dart';
 import 'package:event_manager/services/pdf_service.dart';
 import 'package:event_manager/ui/widgets/addtask_btn.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -137,7 +135,14 @@ class _HomePageState extends State<HomePage> {
         const SizedBox(width: 20),
         GestureDetector(
           onTap: () {
-            ThemeService().switchTheme();
+            Get.snackbar(
+              "Under Development",
+              "This feature is under development.",
+              snackPosition: SnackPosition.BOTTOM,
+              backgroundColor: Colors.white,
+              colorText: pinkClr,
+              icon: const Icon(Icons.warning_amber_rounded, color: Colors.red),
+            );
           },
           child: Icon(
             Get.isDarkMode ? Icons.wb_sunny_outlined : Icons.nightlight_round,
@@ -578,14 +583,14 @@ Widget _buildDrawer(BuildContext context) {
             leading: const Icon(Icons.lock_open_rounded, color: Colors.purpleAccent),
             title: const Text("App Lock"),
             onTap: () {
-              AppLockService.isPinSet().then((isPinSet) {
-                if (isPinSet) {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ResetPinScreen()));
-                } else {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => SetPinScreen()));
-                }
-              });
-              Navigator.pop(context);
+              Get.snackbar(
+                "Under Development",
+                "This feature is under development.",
+                snackPosition: SnackPosition.BOTTOM,
+                backgroundColor: Colors.white,
+                colorText: pinkClr,
+                icon: const Icon(Icons.warning_amber_rounded, color: Colors.red),
+              );
             },
           ),
           SizedBox(height: 20,),
